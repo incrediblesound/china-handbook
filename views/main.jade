@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+  div.container
+    h1.text-center= data.tag
+    - if(data.dates)
+      p(class='lead text-center')= data.dates
+    p= data.description.one
+    - if(data.description.two.length !== 0)
+      p(class='btn btn-info btn-sm open') Read On
+    p.two= data.description.two
+    - var c = 0
+    - for(var part in data)
+      - if(part !== 'tag' && part !== 'description' && part !== 'dates')
+        a(href='/section/#{part}' class='btn btn-default')= part

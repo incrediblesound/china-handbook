@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  div.container
+    div.row
+      h1.text-center Pre-modern History
+      hr
+    div.row
+      h2 Pre-history
+      ul(class='nav navbar-nav')
+        - for(var part in prehistory)
+          li
+            a(href='/main/#{part}' class='btn btn-default btn-lg')= prehistory[part].tag
+    div.row
+      h2 Dynastic History
+      h3 Pre Imperial
+      ul(class='nav navbar-nav')
+        - var c = 0
+        - for(var part in dynasties)
+          - if(c < 4)
+            li
+              a(href='/main/#{part}' class='btn btn-default btn-lg')= dynasties[part].tag
+              - c += 1
+    div.row
+      h3 Imperial
+      ul(class='nav navbar-nav')
+        - var d = 0
+        - for(var part in dynasties)
+          - d += 1
+          - if(d > 4)
+            li
+              a(href='/main/#{part}' class='btn btn-default btn-lg')= dynasties[part].tag
