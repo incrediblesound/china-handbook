@@ -13,4 +13,9 @@ block content
     - var c = 0
     - for(var part in data)
       - if(part !== 'tag' && part !== 'description' && part !== 'dates')
-        a(href='/section/#{part}' class='btn btn-default')= part
+        - if(part === 'literature')
+          p <strong>Literary Sources: </strong>
+            - for(var text in data[part])
+              a(class='btn btn-default' href='/calltext/#{data[part][text].text.source}+#{data[part][text].text.text}')= data[part][text].name
+        - else
+          a(href='/section/#{part}' class='btn btn-default')= part

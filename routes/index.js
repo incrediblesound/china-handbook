@@ -2,8 +2,7 @@
 /*
  * GET home page.
  */
-var dynasties = require('./chinabook.js').dynasties;
-var prehistory = require('./chinabook.js').earlyTimes;
+var premodern = require('./chinabook.js').premodern;
 var lit = require('./chinabook.js').lit;
 
 exports.index = function(req, res){
@@ -11,38 +10,40 @@ exports.index = function(req, res){
 };
 
 exports.premodern = function(req, res){
-	req.session.section = 'premodern';
-	req.session.subsection = false;
-	res.render('partone', {
-		prehistory: prehistory,
-		dynasties: dynasties
-	})
+	req.session.division = 'premodern';
+	req.session.section = false;
+	res.render('partone')
 };
 
 exports.main = function(req, res) {
-	var location;
-	if(req.session.section === 'premodern') {
-		location = dynasties;
+	if(!req.session.section) {
+		req.session.section = req.params.cat;
 	} else {
-		location = modern;
+	req.session.section = req.session.section + '.' + req.params.cat;
 	};
-	req.session.subsection = req.params.cat;
-	data = location[req.params.cat]
+	if(req.session.division === 'premodern'){
+		data = premodern[req.session.section]
+	};
 	res.render('main', {
 		data: data
 	});
 };
 
 exports.section = function(req, res) {
-	var location;
-	if(req.session.section === 'premodern') {
-		location = dynasties;
-	} else {
-		location = modern;
-	};
-	var data = location[req.session.subsection][req.params.cat];
+	var data = premodern[req.session.section][req.params.cat];
 	res.render('main', {
 		data: data
+	})
+}
+
+exports.calltext = function(req, res) {
+	var content = req.params.text.split('+');
+	var source = content[0];
+	var text = content[1];
+	var data = lit[source];
+	res.render('text', {
+		data: data,
+		key: text
 	})
 }
 
