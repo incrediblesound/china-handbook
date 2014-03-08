@@ -9,27 +9,30 @@ exports.premodern = {
 			cultures with artifacts including pottery and stonework.',
 			two:''},
     pleistocene: {
+  		place: 'prehistory+pleistocene',
       tag: 'The Pleistocene',
       description: {one:'Our current geological epoch, the holocene, began about\
- 11,700 years before the present. The preceding epoch is known as the\
- pleistocene. At the end of the pleistocene, East Asia had a warm moist\
- climate. There was an abundance of vegetaion including plants both edible and\
- medicinal and animals such as elephant, crocodile and deer, many of which are\
- now only to be found in southern China and other parts of Asia.',
+ 				11,700 years before the present. The preceding epoch is known as the\
+ 				pleistocene. At the end of the pleistocene, East Asia had a warm moist\
+ 				climate. There was an abundance of vegetaion including plants both edible and\
+ 				medicinal and animals such as elephant, crocodile and deer, many of which are\
+ 				now only to be found in southern China and other parts of Asia.',
  			two:''}
     },
 	holocene: {
+		place: 'prehistory+holocene',
     tag: 'The Holocene',
-    description: {one:'People all over the world started developing agriculture around\
-10,000 years ago. Excavations all over China have uncovered remains of\
-sophisticated civilizations dating from this era, with artifacts including\
-carved jade, pottery, musical instruments and even written language, although\
-the few symbols passed down from these cultures have not been decifered.\
-According to these ecavations it is known that civilizations in the north\
-primarily cultivated millet while those of the south grew domesticated rice.',
+    description: {one:'People all over the world started developing agriculture around \
+			10,000 years ago. Excavations all over China have uncovered remains of \
+			sophisticated civilizations dating from this era, with artifacts including \
+			carved jade, pottery, musical instruments and even written language, although \
+			the few symbols passed down from these cultures have not been decifered. \
+			According to these ecavations it is known that civilizations in the north \
+			primarily cultivated millet while those of the south grew domesticated rice.',
 		two:''}
   },
 	civilization: {
+		place:'prehistory+civilization',
     tag: 'Pre-historic Civilizations',
 		description: { one:'Prior to 3000bc there were a number of different unique cultures\
 already flourishing in the area which later became known as China. These\
@@ -40,20 +43,24 @@ most resplendant graves contain many ritualistic objects which suggests that the
 leaders of these societies simultaneously held political, military, and\
 religious roles.',
 			two:''},
-		Shamanism: {
+		shamanism: {
+			place:'prehistory+civilization+shamanism',
       tag: 'Shamanism',
       description: 'cong and bi'
     },
 		society: {
+			place:'prehistory+civilization+society',
       tag: 'Society',
       description: 'walled settlements'
     },
 		technology: {
+			place:'prehistory+civilization+technology',
       tag: 'Technology',
       description: 'mining and jade carving'
     }
 	},
   	language: {
+  		place:'prehistory+civilization+language',
     	tag: 'Language',
   		description: 'Chinese languages form one branch of the Sino-Tibetan language \
  family, also called "Trans-Himalayan" by some scholars. This classification is \
@@ -76,8 +83,9 @@ religious roles.',
 			of Chinese culture may have originated with them, or at least have been \
 			transmitted via their scribes, artists and shamans.',
 			two:''},
-		Shang:{
+		shang:{
     	tag: 'Shang',
+    	place: 'preimperial+shang',
 			dates: '(ca. 1600-1046 BC)',			
 			description: {
 				one: 'The Shang dynasty was considered the first Chinese dynasty by traditional Chinese historians. \
@@ -91,6 +99,7 @@ religious roles.',
 			script: 'Oracle Bones',
 			religion: {
 				tag: 'Ancestor worship',
+				place: 'preimperial+shang+religion',
 				description: {   
 					one: 'The Shang had a complex system of divination\
 					whereby the king and/or his shamans, who were also nobles, asked for\
@@ -127,9 +136,10 @@ religious roles.',
 		    }
     	}
 		},
-    Zhou: {         
+    zhou: {         
       tag: 'Zhou',
       dates: '1046-221 bc',
+      place: 'preimperial+zhou',
       description: {         
         one: 'Zhou was one many states in central China that existed alongside \
 				the Shang in neolithic times. In 1045 bc the Zhou army defeated the Shang and \
@@ -152,6 +162,7 @@ religious roles.',
       },
 			conquest:{
 				tag: 'The Zhou conquest of Shang',
+				place: 'preimperial+zhou+conquest',
         description: {
         		one: 'Before he died in 1050 bc King Wen of Zhou began a series \
         of military capaigns against the Shang by setting up a new capitol in \

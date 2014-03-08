@@ -12,10 +12,10 @@ block content
     p.two= data.description.two
     - var c = 0
     - for(var part in data)
-      - if(part !== 'tag' && part !== 'description' && part !== 'dates')
+      - if(part !== 'tag' && part !== 'description' && part !== 'dates' && part !== 'place')
         - if(part === 'literature')
           p <strong>Literary Sources: </strong>
             - for(var text in data[part])
               a(class='btn btn-default' href='/calltext/#{data[part][text].text.source}+#{data[part][text].text.text}')= data[part][text].name
         - else
-          a(href='/section/#{part}' class='btn btn-default')= part
+          a(href='/section/#{data[part].place}' class='btn btn-default')= part

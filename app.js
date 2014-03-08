@@ -39,7 +39,7 @@ app.get('/history', routes.premodern);
 app.get('/modern', routes.modern);
 app.get('/literature', routes.literature);
 app.get('/main/:cat', routes.main);
-app.get('/section/:cat', routes.section);
+app.get('/section/:cat', routes.main);
 app.get('/calltext/:text', routes.calltext);
 
 http.createServer(app).listen(app.get('port'), function(){
