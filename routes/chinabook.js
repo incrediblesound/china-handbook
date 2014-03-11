@@ -62,21 +62,28 @@ religious roles.',
   	language: {
   		place:'prehistory+civilization+language',
     	tag: 'Language',
-  		description: 'Chinese languages form one branch of the Sino-Tibetan language \
+  		description: {one: 'Chinese languages form one branch of the Sino-Tibetan language \
  family, also called "Trans-Himalayan" by some scholars. This classification is \
  based on similarities between words such as the numbers one through ten, \
  pronouns such as I, me and you, and other basic words. While it is possible that these \
  similarities are due to early contact between Chinese and Tibetan peoples, the \
- evidence is too scarce to draw definite conclusions.'
+ evidence is too scarce to draw definite conclusions.',
+ 			two:'There is not one "Chinese language" today, and there most likely never was one. In modern China, it is \
+ 			probably not an exageration to say that every city has its own language. While people refer to them as "dialects", this designation is \
+ 			more political than technical. Most of them are about as similar as the romance languages of Europe, but there are too many \
+ 			to make generalizations, and indeed many (perhaps the majority) of local dialects in China remain un-studied. \
+ 			What most people refer to when they say Chinese is in fact Mandarin, or "the common language" \
+ 			as it is called in China. Mandarin was originally the local dialect of Beijing, and was chosen to be the \
+ 			official language of China in the mid 20th century.'}
   	}
 	},
 	preimperial: {
 		tag: 'Pre-imperial China',
 		dates: '~1600-221 BC',
 		description: {
-			one:'The history of pre-imperial China has been organized into a tidy \
+			one:'The history of pre-imperial China has been organized by traditional historians into a tidy \
 			succession of dynasties starting with the Xia, which is prehistoric, and \
-			a continuing on through the Shang and Zhou dynasties. This linear model \
+			continuing on through the Shang and Zhou dynasties. This linear model \
 			is problematic because it ignores the cultural diversity of ancient \
 			China. It is apparent, however, that the Shang and Zhou were powerful \
 			regional leaders that exerted control over smaller states, and that much \
@@ -90,38 +97,50 @@ religious roles.',
 			description: {
 				one: 'The Shang dynasty was considered the first Chinese dynasty by traditional Chinese historians. \
 				It is not entirely clear why this is; there were many other states contemporaneous with the Shang. \
-				It is likely that the Shang civilization was regionally the most powerful, and may have been an important source of \
-				Chinese writing, religion, and art. \
-				Shang civilization did have many characteristics unique \
-				to Chinese culture and political organization, most notably divination with animal bones, and the bronze tripods which retained ritual significance \
-				throughout the Zhou dynasty.',
+				It is likely that the Shang civilization was regionally the most powerful in terms of military and \
+				political power. It is also probable that the Shang civilization was the largest producer of \
+				writing, religious artifacts, and other artwork. \
+				Shang civilization had many characteristics that became enduring elements of Chinese culture, \
+				most notably Chinese characters but also sophisticated divinatory practices, ancestor worship, and \
+				the bronze tripods which would retain ritual significance throughout the Zhou dynasty.',
 				two: ''},
-			script: 'Oracle Bones',
+			script: {
+				tag: 'Oracle Bones',
+				place: 'preimperial+shang+script',
+				description: {one:'There are two kinds of writing that have been passed down to us from the Shang: oracle bones and bronze tripods. \
+				Oracle bones are usually turtle shells or cow scapulae that have been inscriped with a divinatory "charge", usually a question \
+				about an important event such as a harvest or a battle. The characters are detailed and often pictographic. Many of them \
+				are still in use in modern Chinese writing, although their form has been changed by millenia of systemization and \
+				standardization',
+				two:''},
+				image:{ONE:'shang_A.JPG',TWO:'shang_B.JPG'}
+			},
 			religion: {
 				tag: 'Ancestor worship',
 				place: 'preimperial+shang+religion',
 				description: {   
-					one: 'The Shang had a complex system of divination\
-					whereby the king and/or his shamans, who were also nobles, asked for\
-					guidance from the ancestors or from "god". The questions were inscribed\
-					into bovine scapula or turtle shells, now called "oracle bones", and a\
-					heat source was applied to produce cracks. The cracks were interpreted\
-					and a summary of the divination event was inscribed on the bone. This\
+					one: 'The Shang had a complex system of divination \
+					whereby the king and/or his shamans, who were also nobles, asked for \
+					guidance from the ancestors or from "god". The questions were inscribed \
+					into bovine scapula or turtle shells, now called "oracle bones", and a \
+					heat source was applied to produce cracks. The cracks were interpreted \
+					and a summary of the divination event was inscribed on the bone. This \
 					process was gradually simplified of the course of Shang history.',
 
-				two: 'At first, a large variety of questions were offered up to the\
-				higher powers, including topics such as harvest, childbirth, the\
-				interpretation of dreams, and matters of diplomacy or war. The\
-				questions were formed in binary pairs which were inscribed in bold\
-				calligraphy on either side of the bone, and filled in with colorful\
-				pigment when the divination process was complete. Over time the\
-				subject matter of divination became narrower, mostly covering requests\
-				for safety and a plentiful hunt. The calligraphic inscriptions became\
-				simpler both in style and content, and the interpretations lost their\
-				depth and variety. <br> This is most likely due to a greater\
-				systemization of royal power, which may have relied less on spectacle\
-				as it became more established. Another factor was the development of a\
-				new system of divination which is known today as the Yi Jing.'
+				two: 'At first, a large variety of questions were offered up to the \
+				higher powers, including topics such as harvest, childbirth, the \
+				interpretation of dreams, and matters of diplomacy or war. The \
+				questions were formed in binary pairs which were inscribed in bold \
+				calligraphy on either side of the bone, and filled in with colorful \
+				pigment when the divination process was complete. Over time the \
+				subject matter of divination became narrower, mostly covering requests \
+				for safety and a plentiful hunt. The calligraphic inscriptions became \
+				simpler both in style and content, and the interpretations lost their \
+				depth and variety. <br> This could be due to a greater \
+				systemization of royal power that relied less on spectacle \
+				as it became more established, and potentially also because a \
+				new system of divination was emerging that later became known as the "Zhou Yi", or Yi Ching as it \
+				is known in the west.'
       	}
 			},
 			technology: {
@@ -183,10 +202,56 @@ religious roles.',
         		}
         	}
         },
-			civilwar:{},
+			civilwar:{
+				tag: 'Civil War',
+				place:'preimperial+zhou+civilwar',
+				dates: 'ca. 1043 BC',
+				description: {one:'King Wu died two years after he defeated Shang, a victory that elevated Zhou to regional supremacy \
+				in north east China. Soon after he died King Wu\'s brother Zhou Gong Dan declared Wu\'s eldest son and heir to the throne \
+				too young to rule and established himself as regent. King Wu\'s other brothers didn\'t recognize Gong Dan, and \
+				they set up a network of alliances in the East to oppose his rule. Zhou Gong Dan, together with the rightful heir King Cheng and \
+				his half-brother Shao Gong Shi successfully defeated the kingdoms to the east, in the process expanding their territory \
+				all the way to the eastern seaboard.',
+				two:''},
+				heaven: {
+					tag: 'The Authority of Heaven',
+					place: 'preimperial+zhou+civilwar+heaven',
+					description: {one:'There is textual evidence that King Cheng initiated the war against his uncles partly on account of \
+					favorable results he obtained when divining about the matter with turtle shells. The text which has been passed down to us \
+					records a speech he made to a gathering of lords where he places great trust in the intelligence of heaven. This text \
+					is also significant because it contains the first reference to the "Mandate of Heaven", an idea which plays an important role in \
+					Chinese political thinking.',
+					two:''},
+					literature: {
+						dagao: {
+							name: 'The Great Announcement',
+							source: 'The Book of Shang',
+							text: {source: 'shangshu', text: 'dagao'}
+						}
+					}
+				}
+			},
+			eastern:{
+				tag: 'Eastern Zhou',
+				dates: '~1045-771 BC',
+				place: 'preimperial+zhou+eastern',
+				description: {one:'Zhong Gong Dan and King Cheng intitally used a fuedal system to consolidate power \
+				whereby relatives of the ruling family were sent to rule smaller states father away from the capitol. \
+				The King stood at the political center of the kingdom, which means that all official titles and appointments \
+				were officiated by him. Often such appointments were commemorated by the casting of a bronze tripod.',
+				two:''}
+			}
 			western:{},
-			literature:{},
-			script:{}
+			script:{
+				tag: 'Seal Script',
+				place: 'preimperial+zhou+script',
+				description: {one:'Seal script is a term for a variety of scripts that evolved out of Shang era writing. \
+				It is hard to generalize about seal script because of its amazing variety and regional variation. Typical features are \
+				complex semi-pictographic structure, long strokes of even width with rounded ends, and a general tendency towards \
+				vertical elongation.',
+				two:''},
+				image: {ONE:'zhou_A.JPG',TWO:'zhou_B.JPG'}
+			}
 		},
 		SpringAndAutumn:{
     	tag:'Spring and Autumn'
@@ -240,6 +305,17 @@ exports.lit = {
 		yin: {
 			name: 'Annals of Yin',
 			chapters: {}
+		}
+	},
+	shangshu: {
+		title: 'The Book of Shang',
+		dagao: {
+			title: 'The Great Announcement',
+			body: 'I have always said: "Heaven gathered Shang up like a great harvester." How could I dare not to \
+			continue this job in my own fields. Heaven showed favor upon my predecessor. So why should I follow the \
+			divination and refuse to heed your warnings? My predecessor establish the borders of this land, how much more \
+			should I press on when the divinations are still favorable? For this reason I go so far as to lead a campaign \
+			in the east. The mandate of heaven does not err, and the divinations thereof all point to this.'
 		}
 	},
 	shijing: {

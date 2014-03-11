@@ -10,9 +10,12 @@ block content
     - if(data.description.two.length !== 0)
       p(class='btn btn-info btn-sm open') Read On
     p.two= data.description.two
-    - var c = 0
     - for(var part in data)
-      - if(part !== 'tag' && part !== 'description' && part !== 'dates' && part !== 'place')
+      - if(part === 'image')
+        - for(var img in data[part])
+          p(class='btn btn-default image' class='#{img}') Image
+          img(src='/images/#{data[part][img]}' width='170' height='250' class='pic' id='#{img}')
+      - if(part !== 'tag' && part !== 'description' && part !== 'dates' && part !== 'place' && part !== 'image')
         - if(part === 'literature')
           p <strong>Literary Sources: </strong>
             - for(var text in data[part])

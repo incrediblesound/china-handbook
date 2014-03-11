@@ -18,13 +18,7 @@ exports.premodern = function(req, res){
 
 exports.main = function(req, res) {
 	var parts = req.params.cat.split('+');
-  if(parts.length === 1) {
-    data = premodern[parts[0]];
-  } else if (parts.length === 2) {
-    data = premodern[parts[0]][parts[1]];
-  } else if (parts.length === 3) {
-    data = premodern[parts[0]][parts[1]][parts[2]];
-  };
+  data = chain(parts);
 	res.render('main', {
 		data: data
 	});
@@ -58,3 +52,16 @@ exports.modern = function(req, res) {
 exports.literature = function(req, res) {
 
 }
+
+var chain = function(terms) {
+  var parts = terms;
+if(parts.length === 1) {
+    return premodern[parts[0]];
+  } else if (parts.length === 2) {
+    return premodern[parts[0]][parts[1]];
+  } else if (parts.length === 3) {
+    return premodern[parts[0]][parts[1]][parts[2]];
+  } else if (parts.length === 4) {
+    return premodern[parts[0]][parts[1]][parts[2]][parts[3]]
+  };
+};
