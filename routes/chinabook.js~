@@ -10,7 +10,7 @@ exports.premodern = {
 			two:''},
 		stages: {
     	pleistocene: {
-  			place: 'prehistory+stages+pleistocene',
+  			place: 'prehistory+pleistocene',
       	tag: 'The Pleistocene',
       	description: {one:'Our current geological epoch, the holocene, began about\
  				11,700 years before the present. The preceding epoch is known as the\
@@ -21,7 +21,7 @@ exports.premodern = {
  				two:''}
     	},
 			holocene: {
-				place: 'prehistory+stages+holocene',
+				place: 'prehistory+holocene',
     		tag: 'The Holocene',
     		description: {one:'People all over the world started developing agriculture around \
 			10,000 years ago. Excavations all over China have uncovered remains of \
@@ -35,7 +35,7 @@ exports.premodern = {
   	},
   		aspects: {
 			civilization: {
-				place:'prehistory+aspects+civilization',
+				place:'prehistory+civilization',
     		tag: 'Pre-historic Civilizations',
 				description: { one:'Prior to 3000bc there were a number of different unique cultures\
 				already flourishing in the area which later became known as China. These\
@@ -47,23 +47,23 @@ exports.premodern = {
 				religious roles.',
 				two:''},
 				shamanism: {
-					place:'prehistory+aspects+civilization+shamanism',
+					place:'prehistory+civilization+shamanism',
       		tag: 'Shamanism',
       		description: 'cong and bi'
     			},
 				society: {
-					place:'prehistory+aspects+civilization+society',
+					place:'prehistory+civilization+society',
       		tag: 'Society',
       		description: 'walled settlements'
     			},
 				technology: {
-					place:'prehistory+aspects+civilization+technology',
+					place:'prehistory+civilization+technology',
       		tag: 'Technology',
       		description: 'mining and jade carving'
     			}
 				},
   		language: {
-  			place:'prehistory+aspects+civilization+language',
+  			place:'prehistory+civilization+language',
     		tag: 'Language',
   			description: {one: 'Chinese languages form one branch of the Sino-Tibetan language \
  				family, also called "Trans-Himalayan" by some scholars. This classification is \
@@ -97,7 +97,7 @@ exports.premodern = {
 		stages: {
 			shang:{
     		tag: 'Shang',
-    		place: 'preimperial+stages+shang',
+    		place: 'preimperial+shang',
 				dates: '(ca. 1600-1046 BC)',			
 				description: {
 				one: 'The Shang dynasty was considered the first Chinese dynasty by traditional Chinese historians. \
@@ -112,7 +112,7 @@ exports.premodern = {
 				aspects:{
 				script: {
 					tag: 'Oracle Bones',
-					place: 'preimperial+stages+shang+aspects+script',
+					place: 'preimperial+shang+script',
 					description: {one:'There are two kinds of writing that have been passed down to us from the Shang: oracle bones and bronze tripods. \
 					Oracle bones are usually turtle shells or cow scapulae that have been inscriped with a divinatory "charge", usually a question \
 					about an important event such as a harvest or a battle. The characters are detailed and often pictographic. Many of them \
@@ -123,7 +123,7 @@ exports.premodern = {
 					},
 				religion: {
 					tag: 'Ancestor worship',
-					place: 'preimperial+stages+shang+aspects+religion',
+					place: 'preimperial+shang+religion',
 					description: {   
 					one: 'The Shang had a complex system of divination \
 					whereby the king and/or his shamans, who were also nobles, asked for \
@@ -165,7 +165,7 @@ exports.premodern = {
     		zhou: {
       tag: 'Zhou',
       dates: '1046-221 bc',
-      place: 'preimperial+stages+zhou',
+      place: 'preimperial+zhou',
       description: {
         one: 'Zhou was one many states in central China that existed alongside \
 				the Shang in neolithic times. In 1045 bc the Zhou army defeated the Shang and \
@@ -188,7 +188,7 @@ exports.premodern = {
      stages: {
 			conquest:{
 				tag: 'The Zhou conquest of Shang',
-				place: 'preimperial+stages+zhou+stages+conquest',
+				place: 'preimperial+zhou+conquest',
         description: {
         		one: 'Before he died in 1050 bc King Wen of Zhou began a series \
         of military capaigns against the Shang by setting up a new capitol in \
@@ -201,6 +201,7 @@ exports.premodern = {
         "Shepard\'s Wild" just south of the capitol, where his cavalry \
         sucessfully routed the Shang forces.',
         		two: ''},
+        		aspects:{
         			literature: {
         				daming: {
         					name: 'Great Brightness',
@@ -208,10 +209,11 @@ exports.premodern = {
         					text: {source: 'shijing', text: 'daming'}
         				}
         			}
+        		}
         },
 			civilwar:{
 				tag: 'Civil War',
-				place:'preimperial+stages+zhou+stages+civilwar',
+				place:'preimperial+zhou+civilwar',
 				dates: 'ca. 1043 BC',
 				description: {one:'King Wu died two years after he defeated Shang, a victory that elevated Zhou to regional supremacy \
 				in north east China. Soon after he died King Wu\'s brother Zhou Gong Dan declared Wu\'s eldest son and heir to the throne \
@@ -220,62 +222,51 @@ exports.premodern = {
 				his half-brother Shao Gong Shi successfully defeated the kingdoms to the east, in the process expanding their territory \
 				all the way to the eastern seaboard.',
 				two:''},
-				aspects:{
-					heaven: {
+				heaven: {
 					tag: 'The Authority of Heaven',
-					place: 'preimperial+stages+zhou+stages+civilwar+aspects+heaven',
+					place: 'preimperial+zhou+civilwar+heaven',
 					description: {one:'There is textual evidence that King Cheng initiated the war against his uncles partly on account of \
 					favorable results he obtained when divining about the matter with turtle shells. The text which has been passed down to us \
 					records a speech he made to a gathering of lords where he places great trust in the intelligence of heaven. This text \
 					is also significant because it contains the first reference to the "Mandate of Heaven", an idea which plays an important role in \
 					Chinese political thinking.',
 					two:''},
-						literature: {
-							dagao: {
-								name: 'The Great Announcement',
-								source: 'The Book of Shang',
-								text: {source: 'shangshu', text: 'dagao'}
-							}
+					literature: {
+						dagao: {
+							name: 'The Great Announcement',
+							source: 'The Book of Shang',
+							text: {source: 'shangshu', text: 'dagao'}
 						}
 					}
 				}
 			},
 			western:{
-				tag: 'Western Zhou',
+				tag: 'Eastern Zhou',
 				dates: '~1045-771 B.C.',
-				place: 'preimperial+stages+zhou+stages+western',
+				place: 'preimperial+zhou+western',
 				description: {one:'Zhong Gong Dan and King Cheng used a fuedal system to consolidate power \
 				whereby relatives of the ruling family were sent to rule smaller states father away from the capitol. \
 				The King stood at the political center of the kingdom, which means that all official titles and appointments \
 				were officiated by him. Such appointments were usually commemorated by the casting of a bronze tripod, and \
 				records indicate the central role of ceremony and ritual in the conducting of political and military affairs.',
 				two:''},
-				stages: {
-					chudefeat: {
-						tag: 'Defeat in the South',
-						dates: '~957 B.C.',
-						place: 'preimperial+stages+zhou+stages+western+stages+chudefeat',
-						description: {one:'The song of King Cheng, King Kang, was a successful ruler who expanded the territory and wealth of the \
-						Zhou by engaging in military campaings to the north. His successor, King Zhao, attempted to continue the expansion \
-						by waging a military campaign against a powerful southern state called Chu. King Zhao\'s forces were decimated and \
-						he was killed. This defeat was the beginning of two hundred years of decline for the state of Zhou.',
-						two:''}
-					}
+				chudefeat: {
+					tag: 'Defeat in the South',
+					dates: '~957 B.C.',
+					place: 'preimperial+zhou+western+chudefeat',
+					description: {one:'The song of King Cheng, King Kang, was a successful ruler who expanded the territory and wealth of the \
+					Zhou by engaging in military campaings to the north. His successor, King Zhao, attempted to continue the expansion \
+					by waging a military campaign against a powerful southern state called Chu. King Zhao\'s forces were decimated and \
+					he was killed. This defeat was the beginning of two hundred years of decline for the state of Zhou.',
+					two:''}
 				}
 			},
-			eastern:{
-				tag: 'Eastern Zhou',
-				dates: '771-221 B.C.',
-				place:'preimperial+stages+zhou+stages+eastern',
-				description: {one:'',two:''},
-				stages:{},
-				aspects:{}
-			}
+			eastern:{}
 		},
 		aspects: {
 			script:{
 				tag: 'Seal Script',
-				place: 'preimperial+stages+zhou+aspects+script',
+				place: 'preimperial+zhou+script',
 				description: {one:'Seal script is a term for a variety of scripts that evolved out of Shang era writing. \
 				It is hard to generalize about seal script because of its amazing variety and regional variation. Typical features are \
 				complex semi-pictographic structure, long strokes of even width with rounded ends, and a general tendency towards \
@@ -328,7 +319,6 @@ exports.premodern = {
   	},
 		Song:{
     	tag:'Song'
-  	}
   	}
   }
 };
