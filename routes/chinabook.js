@@ -111,7 +111,7 @@ exports.premodern = {
 				two: ''},
 				aspects:{
 				script: {
-					tag: 'Oracle Bones',
+					tag: 'Oracle Bone Script',
 					place: 'preimperial+stages+shang+aspects+script',
 					description: {one:'There are two kinds of writing that have been passed down to us from the Shang: oracle bones and bronze tripods. \
 					Oracle bones are usually turtle shells or cow scapulae that have been inscriped with a divinatory "charge", usually a question \
@@ -187,7 +187,7 @@ exports.premodern = {
         	period.'},
      stages: {
 			conquest:{
-				tag: 'The Zhou conquest of Shang',
+				tag: 'The Zhou Conquest of Shang',
 				place: 'preimperial+stages+zhou+stages+conquest',
         description: {
         		one: 'Before he died in 1050 bc King Wen of Zhou began a series \
@@ -260,6 +260,35 @@ exports.premodern = {
 						by waging a military campaign against a powerful southern state called Chu. King Zhao\'s forces were decimated and \
 						he was killed. This defeat was the beginning of two hundred years of decline for the state of Zhou.',
 						two:''}
+						},
+					kingmu: {
+						tag: 'Reign of King Mu',
+						dates: '956-918 B.C.',
+						place: 'preimperial+stages+zhou+stages+western+stages+kingmu',
+						description: {one:'King Mu inherited a weakened state whose political influence would soon be dramatically reduced. In \
+						addition to the military defeat that took the life of his predecessor, King Mu was faced with the deterioration of \
+						the political system established by the Zhou founders. The rulers of states far from the capitol, particularly in the east, were no longer \
+						closely related to the rulers in the center. The blood ties that held the kingdom together in the early days \
+						of Zhou superiority had been diluted to a mere trace. Sources suggest that a large number of small kingdoms on the east \
+						coast formed an alliance and sent a combined force against the Zhou capitol. The battle is considered historical fact, \
+						but the details and extend of the alliance that opposed the Zhou is unclear. \
+						While this battle was technically a win for King Mu, who successfully repelled the attack, it is significant that ritual \
+						bronzes are no longer found in the eastern regions after this period. This indicates that the eastern kingdoms ceased to recognize \
+						the political authority of the Zhou King.',
+						two:''},
+						aspects: {
+							reforms: {
+								tag: 'Bureacratization',
+								place: 'preimperial+stages+zhou+stages+western+stages+kingmu+aspects+reforms',
+								description: {one:'At this stage the Zhou government went through a transformation. Whereas before, the King \
+								ruled primarily through a combination of charisma, spiritual authority and military prowess, he now interacted with \
+								and depended on a government bureacracy made up of specialists and professionals. The highest officials were the \
+								Supervisor of the Horse, the Supervisor of Land, and the Supervisor of Works. It is also evident that \
+								the class of scribes, before a relatively small group devoted mainly to divination, grew in size and importance \
+								as the recording and copying of everything that happened in the royal court became standard.', 
+								two:''}
+							}
+						}
 					}
 				}
 			},
